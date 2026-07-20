@@ -1,0 +1,27 @@
+# Core data handling
+numpy
+pandas
+
+# Modelling and statistics
+scikit-learn
+statsmodels
+scipy
+
+# Gradient boosting (LightGBM used for reported results; XGBoost also trained for comparison)
+lightgbm
+xgboost
+
+# Interpretability
+shap
+
+# Plotting
+matplotlib
+seaborn
+
+# Notebooks
+jupyter
+notebook
+
+# Note: pin exact versions for full reproducibility, e.g. run
+#   pip freeze > requirements.txt
+# inside your own environment to capture the versions you actually used.
