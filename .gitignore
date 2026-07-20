@@ -216,3 +216,46 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================
+# DATA — never commit any real patient records
+# ============================================
+# Data files (any format)
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.dta
+*.sav
+*.rds
+*.RData
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.sas7bdat
+*.zip
+*.gz
+*.7z
+
+# Data directories
+data/
+raw/
+raw_data/
+input/
+inputs/
+output/
+outputs/
+results/
+figures/
+extracts/
+cprd/
+ukb/
+biobank/
+
+# Notebook outputs may contain data - strip before commit
+# (clear all outputs in Jupyter before committing)
