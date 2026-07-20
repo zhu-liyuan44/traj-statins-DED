@@ -104,7 +104,7 @@ If you do not have data access, see `examples/synthetic_demo.ipynb`, which runs 
 
 ## Limitations
 
-These estimates are derived from observational data and should be read as **association-level evidence**, not as the result of a randomised comparison. They remain vulnerable to residual confounding and to time-related biases common in pharmacoepidemiology, for example, immortal-time bias and prevalent-user bias. The adjusted regression accounts for measured confounders only, and the propensity score estimates are exploratory. A more rigorous approach to the timing question, for example emulating a **target trial**, with careful time-zero alignment and handling of time-varying confounding would strengthen the causal interpretation, and is a natural next direction for this work.
+These estimates are derived from observational data and should be read as **association-level evidence**, not as the result of a randomised comparison. They remain vulnerable to residual confounding and to time-related biases common in pharmacoepidemiology, for example, immortal-time bias and prevalent-user bias. The adjusted regression accounts for measured confounders only, and the propensity score estimates are exploratory. A more rigorous approach to the timing question, for example emulating a target trial, with careful time-zero alignment and handling of time-varying confounding would strengthen the causal interpretation, and is a natural next direction for this work.
 
 
 
