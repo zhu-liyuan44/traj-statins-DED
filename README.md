@@ -89,7 +89,7 @@ The full pipeline was first developed in **UK Biobank** and then **replicated in
 
 ## How to run
 
-These notebooks assume you have your own approved access to UK Biobank and/or CPRD, extracted to a local secure environment. They will **not** run without that data.
+These notebooks assume you have your own approved access to UK Biobank and/or CPRD. Any UK Biobank data should be run through the [UKB-RAP](https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/). CPRD should be extracted to a local secure environment. They will **not** run without that data.
 
 ```bash
 # Python 3.x
