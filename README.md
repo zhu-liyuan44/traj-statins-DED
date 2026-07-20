@@ -4,7 +4,7 @@ Code for a longitudinal prediction and causal analysis of **statin initiation ti
 
 > **Status:** Research code accompanying a manuscript in preparation. This repository contains analysis code only. **No data are included** (see [Data](#data)).
 
----
+
 
 ## Background
 
@@ -14,7 +14,7 @@ This project asks a question of treatment timing rather than treatment presence:
 
 The causal estimates here are derived from observational data and are **association-level** - see [Limitations](#limitations).
 
----
+
 
 ## Data
 
@@ -31,7 +31,7 @@ To reproduce these analyses you must hold your own approved access to the releva
 
 Statin exposure and drug features were defined using **BNF** codes; CPRD phenotyping additionally uses **Read** and **SNOMED** codes.
 
----
+
 
 ## Methods
 
@@ -51,13 +51,13 @@ Statin exposure and drug features were defined using **BNF** codes; CPRD phenoty
 
 **Health-equity analysis.** Variation in MLTC burden, onset and outcomes was examined by **sex, ethnicity, and socioeconomic status** (Townsend Deprivation Index and Index of Multiple Deprivation).
 
----
+
 
 ## Replication across two data sources
 
 The full pipeline was first developed in **UK Biobank** and then **replicated in a structurally different CPRD population** (131,310 / 108,139 patients). Replicating an entire cohort-to-estimate pipeline across two data sources with different coding systems, structures and follow-up required re-mapping phenotype definitions while holding the analytic logic fixed, and provides a check on the robustness of the findings beyond a single cohort. Keeping the pipeline modular (see [Repository structure](#repository-structure)) is what made this practical.
 
----
+
 
 ## Repository structure
 
@@ -85,7 +85,7 @@ The full pipeline was first developed in **UK Biobank** and then **replicated in
 
 **Intended execution order:** the `data_engineering_*` notebooks run first (in any order among themselves), then the `feature_engineering_*` notebooks (with `feature_engineering_final_sync` last), then `modelling_prediction`, then the `analysis_*` notebooks.
 
----
+
 
 ## How to run
 
@@ -100,13 +100,13 @@ Open the notebooks in `code/` and run in the order described above. Local data p
 
 If you do not have data access, see `examples/synthetic_demo.ipynb`, which runs the core timing–DED analysis end-to-end on **fully synthetic data**, so the method can be inspected without any real records.
 
----
+
 
 ## Limitations
 
 These estimates are derived from observational data and should be read as **association-level evidence**, not as the result of a randomised comparison. They remain vulnerable to residual confounding and to time-related biases common in pharmacoepidemiology, for example, immortal-time bias and prevalent-user bias. The adjusted regression accounts for measured confounders only, and the propensity score estimates are exploratory. A more rigorous approach to the timing question, explicitly emulating a **target trial**, with careful time-zero alignment and handling of time-varying confounding would strengthen the causal interpretation, and is a natural next direction for this work.
 
----
+
 
 ## Citation
 
