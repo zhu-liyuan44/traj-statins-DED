@@ -35,7 +35,7 @@ Statin exposure and drug features were defined using **BNF** codes; CPRD phenoty
 
 ## Methods
 
-**Cohort construction and phenotyping.** Diabetes cases, statin exposure, comorbidities and outcomes were derived from longitudinal electronic health records (baseline demographics plus medical history up to the study end).
+**Cohort construction and phenotyping.** Diabetes cases, statin exposure, comorbidities, drug use and outcomes were derived from longitudinal electronic health records (baseline demographics plus medical history up to the study end).
 
 **Exposure - timing of statin initiation.** The key exposure is the interval between diabetes diagnosis and statin initiation (`days_from_diabetes_to_statins`). For grouped analyses, **early initiation** is defined as starting a statin **within 180 days** of diabetes diagnosis, and **later initiation** as more than 180 days.
 
@@ -49,7 +49,7 @@ Statin exposure and drug features were defined using **BNF** codes; CPRD phenoty
 
 **Causal effect estimation (exploratory).** As a complementary estimate, the average treatment effect (ATE) of earlier vs later initiation on DED was explored using **propensity score matching (PSM)** and **inverse probability of treatment weighting (IPTW)**, pointing in the same direction (lower DED risk with earlier initiation). These estimates are treated as exploratory and are interpreted alongside the adjusted regression above.
 
-**Health-equity analysis.** Variation in MLTC burden, onset and outcomes was examined by **sex, ethnicity, and socioeconomic status** (Townsend Deprivation Index and Index of Multiple Deprivation).
+**Health-equity analysis.** Variation in MLTC burden, onset, polypharmacy (antidiabetics and statins) and outcomes was examined by **sex, ethnicity, and socioeconomic status** (Townsend Deprivation Index and Index of Multiple Deprivation).
 
 
 
