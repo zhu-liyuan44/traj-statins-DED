@@ -21,7 +21,7 @@ The causal estimates here are derived from observational data and are **associat
 **No data are included in this repository.** All analyses use access-controlled datasets that cannot be shared:
 
 - **UK Biobank** - primary cohort. Access is application-based via the UK Biobank Access Management System. Main analytic cohort: **13,391** participants with diabetes.
-- **CPRD** (Clinical Practice Research Datalink) - replication cohort using linked primary care records. Access is licensed and governed by CPRD approvals. Replication cohort: **131,310** patients (including deaths) / **108,139** patients (excluding deaths).
+- **CPRD** (Clinical Practice Research Datalink) - replication cohort using linked primary care records. Access is licensed and governed by CPRD approvals. Replication cohort: **131,310** patients (including deaths) / **115,345** patients (excluding deaths).
 
 To reproduce these analyses you must hold your own approved access to the relevant dataset(s).
 
@@ -55,7 +55,7 @@ Statin exposure and drug features were defined using **BNF** codes; CPRD phenoty
 
 ## Replication across two data sources
 
-The full pipeline was first developed in **UK Biobank** and then **replicated in a structurally different CPRD population** (131,310 / 108,139 patients). Replicating an entire cohort-to-estimate pipeline across two data sources with different coding systems, structures and follow-up required re-mapping phenotype definitions while holding the analytic logic fixed, and provides a check on the robustness of the findings beyond a single cohort. Keeping the pipeline modular (see [Repository structure](#repository-structure)) is what made this practical.
+The full pipeline was first developed in **UK Biobank** and then **replicated in a structurally different CPRD population** (131,310 / 115,345 patients). Replicating an entire cohort-to-estimate pipeline across two data sources with different coding systems, structures and follow-up required re-mapping phenotype definitions while holding the analytic logic fixed, and provides a check on the robustness of the findings beyond a single cohort. Keeping the pipeline modular (see [Repository structure](#repository-structure)) is what made this practical.
 
 
 
