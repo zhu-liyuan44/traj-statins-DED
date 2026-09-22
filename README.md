@@ -29,7 +29,7 @@ To reproduce these analyses you must hold your own approved access to the releva
 - Long-term conditions (MULTIPLY Initiative): https://github.com/zhu-liyuan44/MULTIPLY-Initiative
 - CPRD Aurum codelists (Exeter Diabetes team): https://github.com/zhu-liyuan44/CPRD-Codelists
 
-Statin exposure and drug features were defined using **BNF** codes; CPRD phenotyping additionally uses **Read** and **SNOMED** codes.
+Statin exposure and drug features were defined using BNF codes; CPRD phenotyping additionally uses Read and SNOMED codes.
 
 
 
@@ -37,19 +37,19 @@ Statin exposure and drug features were defined using **BNF** codes; CPRD phenoty
 
 **Cohort construction and phenotyping.** Diabetes cases, statin exposure, comorbidities, drug use and outcomes were derived from longitudinal electronic health records (baseline demographics plus medical history up to the study end).
 
-**Exposure - timing of statin initiation.** The key exposure is the interval between diabetes diagnosis and statin initiation (`days_from_diabetes_to_statins`). For grouped analyses, **early initiation** is defined as starting a statin **within 180 days** of diabetes diagnosis, and **later initiation** as more than 180 days.
+**Exposure - timing of statin initiation.** The key exposure is the interval between diabetes diagnosis and statin initiation (`days_from_diabetes_to_statins`). For grouped analyses, early initiation is defined as starting a statin within 180 days of diabetes diagnosis, and later initiation as more than 180 days.
 
-**Outcome.** The outcome is **diabetic eye disease (DED)**, modelled as a binary endpoint.
+**Outcome.** The outcome is diabetic eye disease (DED), modelled as a binary endpoint.
 
 **Trajectory encoding.** MLTC histories and age of onset were encoded as temporal embeddings, capturing the order and timing of condition onset rather than treating comorbidities as a static count.
 
-**Prediction.** Several machine-learning models were trained to predict DED from the trajectory and demographic features. A gradient boosting model achieved **AUC 0.87 / F1 0.80**, compared with **AUC 0.74 / F1 0.67** for a static-feature baseline. **SHAP** values were used for interpretability. (Prediction models use the full feature set to maximise predictive performance.)
+**Prediction.** Several machine-learning models were trained to predict DED from the trajectory and demographic features. A gradient boosting model achieved AUC 0.84 / F1 0.76, compared with AUC 0.74 / F1 0.67 for a static-feature baseline. SHAP values were used for interpretability. (Prediction models use the full feature set to maximise predictive performance.)
 
-**Association between timing and DED (adjusted).** A logistic regression modelled DED as a function of statin timing, adjusting for **sex, smoking status, alcohol intake, diabetes type, Townsend Deprivation Index and BMI**. Later statin initiation was associated with **higher odds of DED**: after adjustment, each additional year of delay corresponded to roughly an **8.3% increase in the odds** of DED (OR per 100 days ≈ 1.022), and the association remained statistically significant. Covariate directions were consistent with clinical expectation (e.g. higher odds for men than women; higher odds for former smokers; lower odds for type 2 vs type 1 diabetes). This is consistent with a potential benefit of earlier statin initiation.
+**Association between timing and DED (adjusted).** A logistic regression modelled DED as a function of statin timing, adjusting for sex, smoking status, alcohol intake, diabetes type, Townsend Deprivation Index and BMI. **Later statin initiation was associated with higher odds of DED**: after adjustment, each additional year of delay corresponded to roughly an 6.8% increase in the odds of DED (OR per 100 days ≈ 1.019), and the association remained statistically significant. Covariate directions were consistent with clinical expectation (e.g. higher odds for men than women; higher odds for former smokers; lower odds for type 2 vs type 1 diabetes). This is consistent with a potential benefit of earlier statin initiation.
 
-**Causal effect estimation (exploratory).** As a complementary estimate, the average treatment effect (ATE) of earlier vs later initiation on DED was explored using **propensity score matching (PSM)** and **inverse probability of treatment weighting (IPTW)**, pointing in the same direction (lower DED risk with earlier initiation). These estimates are treated as exploratory and are interpreted alongside the adjusted regression above.
+**Causal effect estimation (exploratory).** As a complementary estimate, the average treatment effect (ATE) of earlier vs later initiation on DED was explored using propensity score matching (PSM) and inverse probability of treatment weighting (IPTW), pointing in the same direction (lower DED risk with earlier initiation). These estimates are treated as exploratory and are interpreted alongside the adjusted regression above.
 
-**Health-equity analysis.** Variation in MLTC burden, onset, polypharmacy (antidiabetics and statins) and outcomes was examined by **sex, ethnicity, and socioeconomic status** (Townsend Deprivation Index and Index of Multiple Deprivation).
+**Health-equity analysis.** Variation in MLTC burden, onset, polypharmacy (antidiabetics and statins) and outcomes was examined by sex, ethnicity, and socioeconomic status (Townsend Deprivation Index and Index of Multiple Deprivation).
 
 
 
