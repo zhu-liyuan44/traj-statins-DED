@@ -70,15 +70,16 @@ The full pipeline was first developed in **UK Biobank** and then **replicated in
 ├── code/
 │   ├── data_engineering_demographics.ipynb          # Baseline demographic variables
 │   ├── data_engineering_prescriptions.ipynb         # Prescription records -> statin exposure
-│   ├── data_engineering_death.ipynb                 # Mortality censoring
+│   ├── data_engineering_death.ipynb                 # Mortality analysis / censoring
 │   ├── data_engineering_MLTCs.ipynb                 # Long-term condition identification and visualisation
 │   ├── feature_engineering_drugs.ipynb              # Drug-level features (BNF)
 │   ├── feature_engineering_ltcs_and_onset_age.ipynb # LTC features and age of onset
 │   ├── feature_engineering_trajectories.ipynb       # Statin-embedded MLTCs trajectory
 │   ├── feature_engineering_final_sync.ipynb         # Assemble analysis-ready dataset
-│   ├── modelling_prediction.ipynb                   # ML models + SHAP for DED prediction
-│   ├── analysis_causal.ipynb                        # Timing–DED association + PSM / IPTW
-│   └── analysis_ethnicity.ipynb                     # Health-equity analysis by ethnicity
+│   ├── modelling_prediction.ipynb                   # ML models + SHAP interpretation for DED prediction
+│   ├── analysis_logistic_PSM/IPTW.ipynb             # Timing–DED association + PSM / IPTW
+│   ├── analysis_survival.ipynb                      # Standard survival + time-varying survival analysis
+│   └── analysis_health_equity.ipynb                 # by sex/gender, deprivation, ethnicity
 └── examples/
     └── synthetic_demo.ipynb    # Runnable demo on fully synthetic data (no real records)
 ```
